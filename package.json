@@ -1,0 +1,34 @@
+{
+  "name": "quiz-app-jquery-nodejs-express.js-mongodb-",
+  "description": "Desktop: https://www.figma.com/proto/eaLYt6d93t4mwPDgnqytFK/Quiz-App?node-id=2%3A5&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=2%3A5\r Mobile: https://www.figma.com/proto/eaLYt6d93t4mwPDgnqytFK/Quiz-App?node-id=2%3A137&scaling=scale-down&page-id=2%3A136&starting-point-node-id=2%3A137",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FreedomFighterr/Quiz-App-jQuery-NodeJS-Express.js-MongoDB-.git"
+  },
+  "scripts": {
+    "start": "nodemon server.js",
+    "devStart": "nodemon server.js"
+  },
+  "author": "Freedom Fighterr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FreedomFighterr/Quiz-App-jQuery-NodeJS-Express.js-MongoDB-/issues"
+  },
+  "homepage": "https://github.com/FreedomFighterr/Quiz-App-jQuery-NodeJS-Express.js-MongoDB-#readme",
+  "dependencies": {
+    "axios": "^1.3.4",
+    "body-parser": "^1.20.2",
+    "bootstrap": "^5.3.0-alpha1",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "jquery": "^3.6.3",
+    "mongoose": "^7.0.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}

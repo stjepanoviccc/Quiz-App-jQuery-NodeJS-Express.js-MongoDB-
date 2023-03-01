@@ -1,0 +1,22 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#homepage,
+#homepage>.row,
+#homepage>.row>.col-md-12 {
+    height: 100vh;
+}
+
+.menu-a {
+    color: black !important;
+    text-decoration: none !important;
+    margin: 0px auto;
+}
+
+.menu-a:hover {
+    color: red !important;
+    transform: scaleX(1.05);
+}
