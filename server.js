@@ -20,9 +20,24 @@ app.use('/img', express.static(path.resolve(__dirname, 'assets/img')))
 app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({extended: true}))
 
+// route triggers
 app.get('/', (req,res)=> {
     res.render('index')
 })
+app.get('/start', (req,res)=> {
+    res.render('start')
+})
+app.get('/over', (req,res)=> {
+    res.render('over')
+})
+app.get('/options', (req,res)=> {
+    res.render('options')
+})
+app.get('/highscore', (req,res)=> {
+    res.render('highscore')
+})
+
+// server port
 app.listen(PORT, ()=>{
     console.log(`Server is running on http://localhost:${PORT}`);
 })

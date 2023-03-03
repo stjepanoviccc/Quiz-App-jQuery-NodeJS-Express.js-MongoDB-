@@ -6,10 +6,18 @@
 
 #homepage,
 #homepage>.row,
-#homepage>.row>.col-md-12 {
+#homepage>.row>.col-md-12,
+#options,
+#options>.row>.col-md-12,
+#highscore,
+#highscore>.row,
+#highscore>.row>.col-md-12,
+#over,
+#over>.row{
     height: 100vh;
 }
 
+/* main menu */
 .menu-a {
     color: black !important;
     text-decoration: none !important;
@@ -20,3 +28,35 @@
     color: red !important;
     transform: scaleX(1.05);
 }
+
+/* start */
+.points {
+    text-align: left;
+}
+
+#question-div {
+    border: 1px solid red;
+    padding: 20px;
+}
+
+.answer {
+    border: 1px solid red;
+    padding: 10px;
+}
+
+.answer:hover {
+    background-color: green;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+input {
+    height: 50px;
+    width: 350px;
+}
+
+@media only screen and (max-width: 400px) {
+    input {
+      width: 250px;
+    }
+  }
