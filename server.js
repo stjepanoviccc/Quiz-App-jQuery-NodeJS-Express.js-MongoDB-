@@ -12,7 +12,7 @@ app.set('view engine', 'ejs')
 app.use(morgan('tiny'))
 app.use('/css', express.static(path.resolve(__dirname, 'assets/css')))
 app.use('/js', express.static(path.resolve(__dirname, 'assets/js')))
-app.use('/img', express.static(path.resolve(__dirname, 'assets/img')))
+app.use('/audio', express.static(path.resolve(__dirname, 'assets/audio')))
 // load routes app.use('/', require('./server/routes/router'))
 
 // Connect to database connectDB()

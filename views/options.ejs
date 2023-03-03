@@ -6,13 +6,16 @@
             <div class="row">
                 <div class="col-md-12 d-flex flex-column justify-content-center" id="home-menu">
                     <div class="my-5">
-                        <h2 class="display-2 my-2 options-menu">Sound: <button>OFF</button></h2>
-                        <h2 class="display-2 my-2 options-menu">Theme: <button>DARK</button></h2>
+                        <h2 class="display-2 my-2 options-menu">
+                            Sound: <button class="opt-btn px-3 bg-transparent" id="sound-trigger">OFF</button>
+                        </h2>
+                        <h2 class="display-2 my-2 options-menu">Theme: <button class="opt-btn px-3 bg-transparent">LIGHT</button></h2>
                     </div>
                     <a href="/" class="display-2 my-2 menu-a">Return</a>
                 </div>
             </div>
         </div>
+        <%- include('include/_audio') %>
     </section>
 
     <!-- include footer -->

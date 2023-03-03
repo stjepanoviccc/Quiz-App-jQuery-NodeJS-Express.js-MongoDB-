@@ -3,6 +3,17 @@
     margin: 0;
     box-sizing: border-box;
 }
+::selection {
+    color: red;
+}
+
+audio {
+    display: none;
+}
+
+#fake-btn {
+    display: none;
+}
 
 #homepage,
 #homepage>.row,
@@ -30,18 +41,23 @@
 }
 
 /* start */
-.points {
+#points {
     text-align: left;
+    border: 1px solid black;
+    padding: 0 10px;
+    border-radius:25px;
 }
 
 #question-div {
-    border: 1px solid red;
+    border: 1px solid black;
     padding: 20px;
+    border-radius: 25px;
 }
 
 .answer {
-    border: 1px solid red;
+    border: 1px solid black;
     padding: 10px;
+    border-radius: 25px;
 }
 
 .answer:hover {
@@ -60,3 +76,8 @@ input {
       width: 250px;
     }
   }
+
+/* options */
+.opt-btn {
+    border-radius: 25px;
+}
