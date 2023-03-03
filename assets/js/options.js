@@ -35,3 +35,39 @@ function sound_on() {
         audio[0].play()
     })
 }
+
+// MODE SWITCHER
+if (localStorage.getItem("mode") == 0 || localStorage.getItem("mode") == null) {
+    light_mode()
+} else {
+    dark_mode()
+    $("#mode-trigger").click()
+}
+
+/* trigger each time light/dark is clicked */
+$('#mode-trigger').on('click', () => {
+    if ($('#mode-trigger').text() == 'LIGHT') {
+        localStorage.setItem('mode', 1)
+        dark_mode()
+    }
+    else if ($('#mode-trigger').text() == 'DARK') {
+        localStorage.setItem('mode', 0)
+        light_mode()
+    }
+})
+
+/* function for light mode */
+function light_mode() {
+    localStorage.setItem('mode', 0)
+    $('#mode-trigger').text('LIGHT')
+    // console.log('light')
+    $('body').css('background', 'white')
+}
+
+/* function for dark mode */
+function dark_mode() {
+    localStorage.setItem('mode', 1)
+    $('#mode-trigger').text('DARK')
+    // console.log('dark')
+    $('body').css('background', 'gray')
+}
