@@ -1,5 +1,5 @@
 const express = require('express')
-// const connectDB = require('./server/database/connection')
+const connectDB = require('./server/database/connection')
 const app = express()
 const dotenv = require('dotenv')
 const morgan = require('morgan')
@@ -14,8 +14,8 @@ app.use('/css', express.static(path.resolve(__dirname, 'assets/css')))
 app.use('/js', express.static(path.resolve(__dirname, 'assets/js')))
 app.use('/audio', express.static(path.resolve(__dirname, 'assets/audio')))
 // load routes app.use('/', require('./server/routes/router'))
-
-// Connect to database connectDB()
+// mongodb connection
+connectDB();
 
 app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({extended: true}))
