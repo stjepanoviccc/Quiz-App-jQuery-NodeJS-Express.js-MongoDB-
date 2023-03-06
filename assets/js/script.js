@@ -74,3 +74,16 @@ function dark_mode() {
     // console.log('dark')
     $('body').css('background', 'gray')
 }
+
+// ----------------------------------------------------------------------------------------------------- //
+// ----------------------------------------------------------------------------------------------------- //
+
+if (localStorage.getItem('points') == 0 || localStorage.getItem('points') == null) {
+    var points = 0
+    $('#pointss').text(points)
+    $('#pointss').val(points)
+} else {
+    var points = localStorage.getItem('points')
+    $('#pointss').text(points)
+    $('#pointss').val(points)
+}

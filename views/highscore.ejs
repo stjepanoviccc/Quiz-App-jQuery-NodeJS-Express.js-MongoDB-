@@ -1,3 +1,6 @@
+<% var sorted_users = users.sort((a, b) => parseInt(b.pointss) - parseInt(a.pointss)); %>
+<% var highscores = sorted_users.slice(0, 5); %>
+
 <!-- include header -->
 <%- include('include/_header') %>
 
@@ -7,6 +10,7 @@
                 <div class="col-md-12 d-flex flex-column justify-content-center" id="highscore-menu">
                     <table class="table my-5">
                         <thead>
+                            
                             <tr>
                                 <th class="display-3">#</th>
                                 <th class="display-3">Username</th>
@@ -14,31 +18,26 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <th class="display-6">1</th>
-                                <td class="display-6">Markmarkmark</td>
-                                <td class="display-6">Otto</td>
-                            </tr>
-                            <tr>
-                                <th class="display-6">2</th>
-                                <td class="display-6">And</td>
-                                <td class="display-6">Thornton</td>
-                            </tr>
-                            <tr>
-                                <th class="display-6">3</th>
-                                <td class="display-6">Jacob</td>
-                                <td class="display-6">Thornton</td>
-                            </tr>
-                            <tr>
-                                <th class="display-6">4</th>
-                                <td class="display-6">Jacob</td>
-                                <td class="display-6">Thornton</td>
-                            </tr>
-                            <tr>
-                                <th class="display-6">5</th>
-                                <td class="display-6">Jacob</td>
-                                <td class="display-6">Thornton</td>
-                            </tr>
+                            
+                            <% if (users.length < 5) { %>
+                                <% for(var i=0; i<users.length; i++) {  %>
+                                    <tr>
+                                        <th class="display-6"><%= i+1 %></th>
+                                        <td class="display-6"><%= highscores[i].name%></td>
+                                        <td class="display-6"><%= highscores[i].pointss%></td>
+                                    </tr>
+                                    <% } %>
+
+                              <% } else { %>
+                                <% for(var i=0; i<5; i++) {  %>
+                                    <tr>
+                                        <th class="display-6"><%= i+1 %></th>
+                                        <td class="display-6"><%= highscores[i].name%></td>
+                                        <td class="display-6"><%= highscores[i].pointss%></td>
+                                    </tr>
+                                    <% } %>
+                              <% } %>
+                       
                         </tbody>
                     </table>
                     <a href="/" class="display-2 menu-a">Return</a>
