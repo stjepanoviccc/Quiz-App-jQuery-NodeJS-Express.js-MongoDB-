@@ -1,0 +1,6 @@
+:root {
+    /* default in light - redefined in dark mode */
+    --prim: #f8f9fa;
+    --txt: #212529;
+    --greenie: #7DAA6A;
+}

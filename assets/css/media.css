@@ -1,0 +1,15 @@
+@media only screen and (max-width: 400px) {
+    input {
+      width: 250px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    input {
+        width: 300px;
+    }
+    .answer {
+        padding: 0;
+        margin: 0;
+    }
+}

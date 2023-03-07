@@ -1,3 +1,4 @@
+// modules and app 
 const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
@@ -34,7 +35,7 @@ const userSchema = new mongoose.Schema({
 
 const User = mongoose.model('User', userSchema);
 
-// sending user to database
+// sending data to database / POST 
 app.post('/api/users', (req, res) => {
     const sending_user = new User({
         name: req.body.name,
@@ -51,6 +52,7 @@ app.post('/api/users', (req, res) => {
         });
 });
 
+// getting data from database
 app.get('/api/users', (req, res) => {
     User.find()
         .then(user => {
