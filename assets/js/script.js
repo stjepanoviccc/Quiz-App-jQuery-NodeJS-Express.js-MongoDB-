@@ -73,6 +73,10 @@ function dark_mode() {
     $(':root').css({'--prim': 'goldenrod', '--greenie': '#006400'})
     $('#mode-trigger').text('DARK')
     $('body').css('background', '#212529')
+    $('#username-input').css({'color': 'goldenrod'})
+    $('#username-input').on('focus', function() {
+        $(this).css('border-color', 'goldenrod');
+    });
 }
 
 // ----------------------------------------------------------------------------------------------------- //
